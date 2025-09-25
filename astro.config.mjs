@@ -5,5 +5,7 @@ export default defineConfig({
     i18n: {
         locales: ["en", "pt-br"],
         defaultLocale: "en",
-    }
+    },
+    site: "https://guijrnunes.github.io",
+    base: "/portfolio",
 });
