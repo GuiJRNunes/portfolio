@@ -1,0 +1,84 @@
+{
+    "lang": "en",
+    "meta": {
+        "title": "Guilherme Nunes | Portfolio",
+        "description": "Guilherme Nunes's Full Stack Web Developer Portfolio."
+    },
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "contact": "Contact me",
+        "theme": "Theme"
+    },
+    "parallax": {
+        "background": "Background",
+        "mountain": "Mountain",
+        "lake": "Lake"
+    },
+    "hero": {
+        "img": "Author",
+        "heading": "Hello, I'm Guilherme Nunes!",
+        "paragraphs": [
+            "I'm a Full Stack Web Developer with 4 years of experience in software development, working with Delphi, HTML5, CSS3, JavaScript, jQuery, and MySQL.",
+            "I have solid experience with legacy code, system maintenance, bug fixing, and developing new features, as well as creating responsive and intuitive user interfaces.",
+            "What attracts me most to the tech field is problem-solving and the creative potential behind building applications. I'm always looking to improve my skills and stay focused and committed to delivering high-quality work.",
+            "In addition to application development, I'm also interested in learning more about Machine Learning and have a strong affinity for art and music, enjoying drawing and playing the piano as hobbies."
+        ],
+        "contactCta": "Contact me!"
+    },
+    "projects": {
+        "title": "Projects",
+        "fastTravel": {
+            "title": "FastTravel",
+            "icon": "Fast Travel Icon",
+            "description": "Simple website for a fictional travel agency company built with Laravel.",
+            "slides_alt": ["Home", "Tours", "Tour"]
+        },
+        "signLanguageCv": {
+            "title": "Sign Language Computer Vision Model Comparison",
+            "icons": {
+                "icon_1": "Libras hand icon 1",
+                "icon_2": "Libras hand icon 2"
+            },
+            "description": "Comparison of 3 Computer Vision models trained to recognize sign language.",
+            "slides_alt": [
+                "Libras (Brazilian Sign Language) model test",
+                "ASL (American Sign Language) model test",
+                "ISL (Indian Sign Language) model test",
+                "Results"
+            ]
+        },
+        "mtgPriceTracker": {
+            "title": "Price Checking for MTG cards",
+            "floating_card": {
+                "card": "MTG card - Totally Lost",
+                "extension_icon": "Extension Icon"
+            },
+            "description": "Browser extension that finds card images of the Magic: the Gathering card game in the content of the open page and adds links pointing to each respective card web page on the LigaMagic domain. The intent is to facilitate checking card prices.",
+            "slides_alt": [
+                "Main promotional image",
+                "Second promotional image",
+                "Extension usage on the Archidekt website",
+                "Extension usage on the Scryfall website",
+                "Extension usage on the EDHREC website"
+            ]
+        }
+    },
+    "contact": {
+        "title": "Contact me!",
+        "description": "I really enjoy meeting new people and sharing experiences. If you'd like to talk about technology, projects, potential collaborations, or anything else, feel free to reach out. I'm always open to connecting.",
+        "cta": "Let's connect!"
+    },
+    "footer": {
+        "copyright": "Copyright © {year} Guilherme Nunes",
+        "social": {
+            "title": "Social"
+        },
+        "menu": {
+            "title": "Portfolio menu",
+            "home": "Home",
+            "projects": "Projects",
+            "contact": "Contact me"
+        }
+    }
+}

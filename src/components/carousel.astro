@@ -1,0 +1,35 @@
+---
+import "../styles/carousel.css";
+import { SlideImage } from "../scripts/classes.ts";
+import { Image } from "astro:assets";
+
+const { $id } = Astro.locals;
+
+interface Props {
+    slides: SlideImage[];
+}
+
+let { slides = [] } = Astro.props;
+
+slides = slides.map((item) => {
+    item.id = $id("slide");
+
+    return item;
+});
+---
+
+<div class="slider">
+    {slides.map((item, index) => <a href={`#${item.id}`}>{index+1}</a>)}
+
+    <div class="slides">
+        {
+            slides.map((item) => (
+                <div>
+                    <div id={`${item.id}`} class="slide-link" />
+                    <Image src={item.src} alt={`${item.alt}`} loading="lazy" class="zoom"/>
+                    <p class="center">{item.alt}</p>
+                </div>
+            ))
+        }
+    </div>
+</div>

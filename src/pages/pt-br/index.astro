@@ -1,0 +1,401 @@
+---
+import "../../styles/main.css";
+import "../../styles/fa-brands.css";
+import "../../styles/fontawesome.css";
+import Carousel from "../../components/carousel.astro";
+import LanguageSwitcher from "../../components/languageSwitcher.astro";
+import { Image } from "astro:assets";
+import { SlideImage } from "../../scripts/classes";
+
+import parallaxBackground from "../../images/parallax/parallax_background.png";
+import parallaxMountain1 from "../../images/parallax/parallax_mountain_1.png";
+import parallaxMountain2 from "../../images/parallax/parallax_mountain_2.png";
+import parallaxMountain3 from "../../images/parallax/parallax_mountain_3.png";
+import parallaxMountain4 from "../../images/parallax/parallax_mountain_4.png";
+import parallaxLake from "../../images/parallax/parallax_lake.png";
+
+import heroDesktop from "../../images/hero_desktop.png";
+
+import fastTravelFloatingIcon from "../../images/projects/fast-travel/floating_icon.png";
+import fastTravelHome from "../../images/projects/fast-travel/home.png";
+import fastTravelTour from "../../images/projects/fast-travel/tour.png";
+import fastTravelTours from "../../images/projects/fast-travel/tours.png";
+
+import signLanguageCvASL from "../../images/projects/sign-language-cv/asl_letters.png";
+import signLanguageCvISL from "../../images/projects/sign-language-cv/isl_letters.png";
+import signLanguageCvLibras from "../../images/projects/sign-language-cv/libras_letters.png";
+import signLanguageCvLogoHand1 from "../../images/projects/sign-language-cv/libras_logo_hand_1.png";
+import signLanguageCvLogoHand2 from "../../images/projects/sign-language-cv/libras_logo_hand_2.png";
+import signLanguageCvResults from "../../images/projects/sign-language-cv/results.png";
+
+import mtgPriceTracker3dCardIcon from "../../images/projects/mtg-price-tracker/3d_card_icon_48.png";
+import mtgPriceTracker3dCardImage from "../../images/projects/mtg-price-tracker/3d_card_totally_lost.webp";
+import mtgPriceTrackerSecondPromotionalImage from "../../images/projects/mtg-price-tracker/promotional_440_280.png";
+import mtgPriceTrackerMainPromotionalImage from "../../images/projects/mtg-price-tracker/promotional_1400_560.png";
+import mtgPriceTrackerScreenshotArchidekt from "../../images/projects/mtg-price-tracker/screenshot_archidekt.png";
+import mtgPriceTrackerScreenshotEDHREC from "../../images/projects/mtg-price-tracker/screenshot_edhrec.png";
+import mtgPriceTrackerScreenshotScryfall from "../../images/projects/mtg-price-tracker/screenshot_scryfall.png";
+
+import ptbr from "../../locales/pt-br.json";
+
+const t = ptbr;
+
+const fastTravelSlides: SlideImage[] = [
+    {
+        src: fastTravelHome,
+        alt: t.projects.fastTravel.slides_alt[0] || "",
+        id: "",
+    },
+    {
+        src: fastTravelTours,
+        alt: t.projects.fastTravel.slides_alt[1] || "",
+        id: "",
+    },
+    {
+        src: fastTravelTour,
+        alt: t.projects.fastTravel.slides_alt[3] || "",
+        id: "",
+    },
+];
+
+const signLanguageCvSlides: SlideImage[] = [
+    {
+        src: signLanguageCvLibras,
+        alt: t.projects.signLanguageCv.slides_alt[0] || "",
+        id: "",
+    },
+    {
+        src: signLanguageCvASL,
+        alt: t.projects.signLanguageCv.slides_alt[1] || "",
+        id: "",
+    },
+    {
+        src: signLanguageCvISL,
+        alt: t.projects.signLanguageCv.slides_alt[2] || "",
+        id: "",
+    },
+    {
+        src: signLanguageCvResults,
+        alt: t.projects.signLanguageCv.slides_alt[3] || "",
+        id: "",
+    },
+];
+
+const mtgPriceTrackerSlides: SlideImage[] = [
+    {
+        src: mtgPriceTrackerMainPromotionalImage,
+        alt: t.projects.fastTravel.slides_alt[0] || "",
+        id: "",
+    },
+    {
+        src: mtgPriceTrackerSecondPromotionalImage,
+        alt: t.projects.fastTravel.slides_alt[1] || "",
+        id: "",
+    },
+    {
+        src: mtgPriceTrackerScreenshotArchidekt,
+        alt: t.projects.fastTravel.slides_alt[2] || "",
+        id: "",
+    },
+    {
+        src: mtgPriceTrackerScreenshotScryfall,
+        alt: t.projects.fastTravel.slides_alt[3] || "",
+        id: "",
+    },
+    {
+        src: mtgPriceTrackerScreenshotEDHREC,
+        alt: t.projects.fastTravel.slides_alt[4] || "",
+        id: "",
+    },
+];
+
+const year = new Date().getFullYear();
+---
+
+<html lang=`${t.lang}`>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content=`${t.meta.description}` />
+        <title>{t.meta.title}</title>
+    </head>
+    <body>
+        <aside>
+            <nav>
+                <LanguageSwitcher />
+                <a href="#hero-section">{t.nav.home}</a>
+                <a href="#projects-section">{t.nav.projects}</a>
+                <a href="#contactme-section">{t.nav.contact}</a>
+                <button id="themeToggle">
+                    <svg
+                        width="30px"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            class="sun"
+                            fill-rule="evenodd"
+                            d="M12 17.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zm0 1.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm12-7a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1 0-1.6h2.4a.8.8 0 0 1 .8.8zM4 12a.8.8 0 0 1-.8.8H.8a.8.8 0 0 1 0-1.6h2.5a.8.8 0 0 1 .8.8zm16.5-8.5a.8.8 0 0 1 0 1l-1.8 1.8a.8.8 0 0 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM6.3 17.7a.8.8 0 0 1 0 1l-1.7 1.8a.8.8 0 1 1-1-1l1.7-1.8a.8.8 0 0 1 1 0zM12 0a.8.8 0 0 1 .8.8v2.5a.8.8 0 0 1-1.6 0V.8A.8.8 0 0 1 12 0zm0 20a.8.8 0 0 1 .8.8v2.4a.8.8 0 0 1-1.6 0v-2.4a.8.8 0 0 1 .8-.8zM3.5 3.5a.8.8 0 0 1 1 0l1.8 1.8a.8.8 0 1 1-1 1L3.5 4.6a.8.8 0 0 1 0-1zm14.2 14.2a.8.8 0 0 1 1 0l1.8 1.7a.8.8 0 0 1-1 1l-1.8-1.7a.8.8 0 0 1 0-1z"
+                        ></path>
+                        <path
+                            class="moon"
+                            fill-rule="evenodd"
+                            d="M16.5 6A10.5 10.5 0 0 1 4.7 16.4 8.5 8.5 0 1 0 16.4 4.7l.1 1.3zm-1.7-2a9 9 0 0 1 .2 2 9 9 0 0 1-11 8.8 9.4 9.4 0 0 1-.8-.3c-.4 0-.8.3-.7.7a10 10 0 0 0 .3.8 10 10 0 0 0 9.2 6 10 10 0 0 0 4-19.2 9.7 9.7 0 0 0-.9-.3c-.3-.1-.7.3-.6.7a9 9 0 0 1 .3.8z"
+                        ></path>
+                    </svg>
+                    <span class="sr-only">{t.nav.theme}</span>
+                </button>
+            </nav>
+        </aside>
+
+        <div class="container">
+            <div class="parallax">
+                <Image
+                    src={parallaxBackground}
+                    alt=`${t.parallax.background}`
+                    fetchpriority="high"
+                    loading="eager"
+                />
+                <Image
+                    src={parallaxMountain4}
+                    alt=`${t.parallax.mountain}`
+                    fetchpriority="high"
+                    loading="eager"
+                />
+                <Image
+                    src={parallaxMountain3}
+                    alt=`${t.parallax.mountain}`
+                    fetchpriority="high"
+                    loading="eager"
+                />
+                <Image
+                    src={parallaxMountain2}
+                    alt=`${t.parallax.mountain}`
+                    fetchpriority="high"
+                    loading="eager"
+                />
+                <Image
+                    src={parallaxMountain1}
+                    alt=`${t.parallax.mountain}`
+                    fetchpriority="high"
+                    loading="eager"
+                />
+                <Image
+                    src={parallaxLake}
+                    alt=`${t.parallax.lake}`
+                    fetchpriority="high"
+                    loading="eager"
+                />
+            </div>
+            <section id="hero-section">
+                <div class="hero-card-container">
+                    <div class="hero-card">
+                        <div>
+                            <Image
+                                src={heroDesktop}
+                                srcset="../../images/hero_mobile.png 1920w, ../../images/hero_desktop.png 486w"
+                                sizes="(width < 769px) 1920px, 486px"
+                                alt=`${t.hero.img}`
+                                fetchpriority="high"
+                                loading="eager"
+                            />
+                        </div>
+                        <div class="hero-card-content">
+                            <h1>{t.hero.heading}</h1>
+                            {t.hero.paragraphs.map((item) => <p>{item}</p>)}
+                            <a
+                                href="mailto:guinunesdev@gmail.com"
+                                style="display: block;">{t.hero.contactCta}</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects-section">
+                <h1 class="page-header">{t.projects.title}</h1>
+
+                <div id="fast-travel-card" class="card">
+                    <div id="floating-ft-icon-container">
+                        <Image
+                            src={fastTravelFloatingIcon}
+                            width={128}
+                            alt=`${t.projects.fastTravel.icon}`
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <div class="card-header">
+                        <h2>{t.projects.title}</h2>
+                        <p>
+                            {t.projects.fastTravel.description}
+                        </p>
+                        <div class="flex-layout">
+                            <div class="tech">
+                                <i class="fa-brands fa-laravel"></i> Laravel
+                            </div>
+                            <div class="tech">
+                                <i class="fa-brands fa-html5"></i> HTML
+                            </div>
+                            <div class="tech">
+                                <i class="fa-brands fa-css3-alt"></i> CSS
+                            </div>
+                            <div class="tech">
+                                <i class="fa-brands fa-square-js"></i> JS
+                            </div>
+                        </div>
+                    </div>
+                    <Carousel slides={fastTravelSlides} />
+                    <a
+                        class="outline"
+                        href="https://github.com/GuiJRNunes/fast-travel"
+                        ><i class="fa-brands fa-github"></i> GitHub</a
+                    >
+                </div>
+
+                <div id="sign-language-cv-card" class="card">
+                    <div id="floating-libras-container">
+                        <Image
+                            src={signLanguageCvLogoHand1}
+                            alt=`${t.projects.signLanguageCv.icons.icon_1}`
+                            loading="lazy"
+                        />
+                        <Image
+                            src={signLanguageCvLogoHand2}
+                            alt=`${t.projects.signLanguageCv.icons.icon_2}`
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="card-header">
+                        <h2>{t.projects.signLanguageCv.title}</h2>
+                        <p>
+                            {t.projects.signLanguageCv.description}
+                        </p>
+                        <div class="flex-layout">
+                            <div class="tech">
+                                <i class="fa-brands fa-python"></i> Python
+                            </div>
+                        </div>
+                    </div>
+                    <Carousel slides={signLanguageCvSlides} />
+                    <a
+                        class="outline"
+                        href="https://github.com/GuiJRNunes/sign-language-cv"
+                        ><i class="fa-brands fa-github"></i> GitHub</a
+                    >
+                </div>
+
+                <div id="liga-magic-card" class="card">
+                    <div id="floating-3d-mtg-container">
+                        <Image
+                            src={mtgPriceTracker3dCardImage}
+                            width={192}
+                            alt=`${t.projects.mtgPriceTracker.floating_card.card}`
+                            class="floating-3d-image-card"
+                            loading="lazy"
+                        />
+                        <Image
+                            src={mtgPriceTracker3dCardIcon}
+                            width={24}
+                            alt=`${t.projects.mtgPriceTracker.floating_card.extension_icon}`
+                            class="floating-3d-image-icon"
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <div class="card-header">
+                        <h2>{t.projects.mtgPriceTracker.title}</h2>
+                        <p>
+                            {t.projects.mtgPriceTracker.description}
+                        </p>
+                        <div class="flex-layout">
+                            <div class="tech">
+                                <i class="fa-brands fa-html5"></i> HTML
+                            </div>
+                            <div class="tech">
+                                <i class="fa-brands fa-css3-alt"></i> CSS
+                            </div>
+                            <div class="tech">
+                                <i class="fa-brands fa-square-js"></i> JS
+                            </div>
+                        </div>
+                    </div>
+
+                    <Carousel slides={mtgPriceTrackerSlides} />
+                    <div class="flex-layout">
+                        <a
+                            class="outline"
+                            href="https://chrome.google.com/webstore/detail/bodjodkchbkfajakdhhlpfeigibndcbp"
+                            ><i class="fa-brands fa-chrome"></i> Chrome Web Store</a
+                        >
+                        <a
+                            class="outline"
+                            href="https://github.com/GuiJRNunes/ligamagic-links"
+                            ><i class="fa-brands fa-github"></i> GitHub</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section id="contactme-section">
+                <div class="contactme-container">
+                    <h2>{t.contact.title}</h2>
+                    <p>
+                        {t.contact.description}
+                    </p>
+                    <div style="display: flex; justify-content: center;">
+                        <a href="mailto:guinunesdev@gmail.com"
+                            >{t.contact.cta}</a
+                        >
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <h3 class="copyright">
+                Copyright © {year} Guilherme Nunes
+            </h3>
+            <div class="footer-grid">
+                <div>
+                    <h3>{t.footer.social.title}</h3>
+                    <a class="simple" href="https://github.com/GuiJRNunes"
+                        ><i class="fa-brands fa-github"></i> GitHub</a
+                    >
+                    <a
+                        class="simple"
+                        href="https://www.linkedin.com/in/guilhermejrnunes/"
+                    >
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a class="simple" href="https://www.instagram.com/gui_jrn/">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                </div>
+
+                <div>
+                    <h3>{t.footer.menu.title}</h3>
+                    <a class="simple" href="#hero-section"
+                        >{t.footer.menu.home}</a
+                    >
+                    <a class="simple" href="#projects-section"
+                        >{t.footer.menu.projects}</a
+                    >
+                    <a class="simple" href="#contactme-section"
+                        >{t.footer.menu.contact}</a
+                    >
+                </div>
+            </div>
+        </footer>
+
+        <div id="img-zoom">
+            <img src="" alt="" />
+        </div>
+
+        <script src="../../scripts/animations.js"></script>
+        <script src="../../scripts/zoom.js"></script>
+        <script src="../../scripts/dark_theme.js"></script>
+    </body>
+</html>

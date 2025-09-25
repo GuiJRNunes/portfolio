@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8.4666672mm"
+   height="8.4666672mm"
+   viewBox="0 0 8.4666672 8.4666672"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-100.76667,-144.26667)">
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke-width:1.98438;stroke-linecap:round"
+       id="path1"
+       cx="105"
+       cy="148.5"
+       r="4.2333336" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.62804px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#88d4f2;fill-opacity:1;stroke-width:2.89254;stroke-linecap:round"
+       x="101.60355"
+       y="150.15642"
+       id="text1"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#88d4f2;fill-opacity:1;stroke-width:2.89254"
+         x="101.60355"
+         y="150.15642">GN</tspan></text>
+  </g>
+</svg>

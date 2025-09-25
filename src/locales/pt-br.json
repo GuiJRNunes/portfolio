@@ -1,0 +1,83 @@
+{
+    "lang": "pt-br",
+    "meta": {
+        "title": "Guilherme Nunes | Portfólio",
+        "description": "Portfólio de Desenvolvedor Web Full Stack do Guilherme Nunes."
+    },
+    "nav": {
+        "home": "Início",
+        "projects": "Projetos",
+        "contact": "Contato",
+        "theme": "Tema"
+    },
+    "parallax": {
+        "background": "Fundo",
+        "mountain": "Montanha",
+        "lake": "Lago"
+    },
+    "hero": {
+        "img": "Autor",
+        "heading": "Olá, eu sou o Guilherme Nunes!",
+        "paragraphs": [
+            "Sou Desenvolvedor Web Full Stack com 4 anos de experiência em desenvolvimento de software, trabalhando com Delphi, HTML5, CSS3, JavaScript, jQuery e MySQL.",
+            "Tenho experiência sólida com código legado, manutenção de sistemas, correção de bugs e desenvolvimento de novas funcionalidades, além de criar interfaces de usuário responsivas e intuitivas.",
+            "O que mais me atrai na área de tecnologia é a resolução de problemas e o potencial criativo por trás da construção de aplicações. Estou sempre em busca de aprimorar minhas habilidades e manter o foco e comprometimento em entregar trabalhos de alta qualidade.",
+            "Além do desenvolvimento de aplicações, também tenho interesse em aprender mais sobre Aprendizado de Máquina e possuo forte afinidade com arte e música, apreciando desenhar e tocar piano como hobbies."
+        ],
+        "contactCta": "Entre em contato!"
+    },
+    "projects": {
+        "title": "Projetos",
+        "fastTravel": {
+            "title": "FastTravel",
+            "icon": "Ícone da Fast Travel",
+            "description": "Website simples para uma agência de viagens fictícia desenvolvido em Laravel.",
+            "slides_alt": ["Início", "Tours", "Tour"]
+        },
+        "signLanguageCv": {
+            "title": "Comparação de Modelos de Visão Computacional para Línguas de Sinais",
+            "icons": {
+                "icon_1": "Ícone de mão em Libras 1",
+                "icon_2": "Ícone de mão em Libras 2"
+            },
+            "description": "Comparação de 3 modelos de Visão Computacional treinados para reconhecer línguas de sinais.",
+            "slides_alt": [
+                "Teste do modelo de Libras (Língua Brasileira de Sinais)",
+                "Teste do modelo de ASL (Língua Americana de Sinais)",
+                "Teste do modelo de ISL (Língua Indiana de Sinais)",
+                "Resultados"
+            ]
+        },
+        "mtgPriceTracker": {
+            "title": "Verificação de Preços de Cartas de MTG",
+            "floating_card": {
+                "card": "Carta de MTG - Totalmente Perdido",
+                "extension_icon": "Ícone da extensão"
+            },
+            "description": "Extensão de navegador que identifica imagens de cartas do jogo Magic: the Gathering no conteúdo da página aberta e adiciona links apontando para cada respectiva carta no site da LigaMagic. O objetivo é facilitar a consulta de preços das cartas.",
+            "slides_alt": [
+                "Imagem promocional principal",
+                "Segunda imagem promocional",
+                "Uso da extensão no site Archidekt",
+                "Uso da extensão no site Scryfall",
+                "Uso da extensão no site EDHREC"
+            ]
+        }
+    },
+    "contact": {
+        "title": "Entre em contato!",
+        "description": "Gosto muito de conhecer novas pessoas e compartilhar experiências. Se quiser conversar sobre tecnologia, projetos, possíveis colaborações ou qualquer outro assunto, fique à vontade para entrar em contato. Estou sempre aberto a novas conexões.",
+        "cta": "Vamos nos conectar!"
+    },
+    "footer": {
+        "social": {
+            "title": "Redes Sociais"
+        },
+        "menu": {
+            "title": "Menu do portfólio",
+            "home": "Início",
+            "projects": "Projetos",
+            "contact": "Contato"
+        }
+    }
+}
