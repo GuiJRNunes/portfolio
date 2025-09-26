@@ -12,16 +12,14 @@
 
 @font-face {
     font-family: Roboto;
-    src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+    src: url("/portfolio/fonts/Roboto-Regular.ttf") format("truetype");
     font-weight: normal;
-    /* font-display: optional; */
 }
 
 @font-face {
     font-family: Roboto;
-    src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+    src: url("/portfolio/fonts/Roboto-Bold.ttf") format("truetype");
     font-weight: bold;
-    /* font-display: optional; */
 }
 
 html {

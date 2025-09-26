@@ -14,7 +14,7 @@ import parallaxMountain3 from "../images/parallax/parallax_mountain_3.png";
 import parallaxMountain4 from "../images/parallax/parallax_mountain_4.png";
 import parallaxLake from "../images/parallax/parallax_lake.png";
 
-import heroDesktop from "../images/hero_desktop.png";
+import hero from "../images/hero.png";
 
 import fastTravelFloatingIcon from "../images/projects/fast-travel/floating_icon.png";
 import fastTravelHome from "../images/projects/fast-travel/home.png";
@@ -194,9 +194,7 @@ const year = new Date().getFullYear();
                     <div class="hero-card">
                         <div>
                             <Image
-                                src={heroDesktop}
-                                srcset="../images/hero_mobile.png 1920w, ../images/hero_desktop.png 486w"
-                                sizes="(width < 769px) 1920px, 486px"
+                                src={hero}
                                 alt=`${t.hero.img}`
                                 fetchpriority="high"
                                 loading="eager"
